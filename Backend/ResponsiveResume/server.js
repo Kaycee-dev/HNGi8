@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require('path')
-require("dotenv").config();
+if (app.get('env') == 'development'){ require('dotenv').config(); }
 
 // const nodemailer = require("nodemailer");
 
