@@ -11,7 +11,7 @@
     "nodemon": "^2.0.12"
   },
   "scripts": {
-    "start": "./Backend/ResponsiveResume/server.js",
+    "start": "node ./Backend/ResponsiveResume/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/Kaycee-dev/HNGi8#readme",
   "engines": {
-    "node": "12.x"
+    "node": "12.16.2"
   }
 }
