@@ -1,21 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
-.fill {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden
-}
-
-.fill img {
-    flex-shrink: 0;
-    min-height: 100%;
-    min-width: 100%;
-    /* object-fit: cover;
-    width: 50px;
-    height: 100px; */
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -28,11 +12,12 @@ input {
 }
 
 .container {
-  position: relative;
+  /* position: relative; */
   width: 100%;
   background-color: #fff;
   min-height: 100vh;
   overflow: hidden;
+  overflow-y: auto;
 }
 
 .forms-container {
@@ -43,7 +28,7 @@ input {
   left: 0;
 }
 
-.signin-signup {
+.resume {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -67,12 +52,12 @@ form {
   grid-row: 1 / 2;
 }
 
-form.sign-up-form {
+form.contact-me-form {
   opacity: 0;
   z-index: 1;
 }
 
-form.sign-in-form {
+.resume-details {
   z-index: 2;
 }
 
@@ -259,16 +244,16 @@ form.sign-in-form {
   transform: translateX(-800px);
 }
 
-.container.sign-up-mode .signin-signup {
+.container.sign-up-mode .resume {
   left: 25%;
 }
 
-.container.sign-up-mode form.sign-up-form {
+.container.sign-up-mode form.contact-me-form {
   opacity: 1;
   z-index: 2;
 }
 
-.container.sign-up-mode form.sign-in-form {
+.container.sign-up-mode .resume-details {
   opacity: 0;
   z-index: 1;
 }
@@ -291,15 +276,15 @@ form.sign-in-form {
     min-height: 800px;
     height: 100vh;
   }
-  .signin-signup {
+  .resume {
     width: 100%;
     top: 95%;
     transform: translate(-50%, -100%);
     transition: 1s 0.8s ease-in-out;
   }
 
-  .signin-signup,
-  .container.sign-up-mode .signin-signup {
+  .resume,
+  .container.sign-up-mode .resume-contact {
     left: 50%;
   }
 
@@ -383,7 +368,7 @@ form.sign-in-form {
     transform: translateY(300px);
   }
 
-  .container.sign-up-mode .signin-signup {
+  .container.sign-up-mode .resume {
     top: 5%;
     transform: translate(-50%, 0);
   }
@@ -413,4 +398,98 @@ form.sign-in-form {
     bottom: 28%;
     left: 50%;
   }
+}
+
+.site-nav {
+  z-index: 7;
+}
+
+.resume-head {
+  /* display: flexbox; */
+  position: absolute;
+  width: 100%;
+  top: 0%;
+}
+
+.resume-top {
+  display: block;
+  position: relative;
+  /* top: 0%; */
+  max-height:215px;
+  text-align: center;
+}
+
+.resume-top img {
+  text-align: center;
+  border-radius: 50%;
+  max-height: 200px;
+  z-index: 4;
+  transform: translateY(4%);
+}
+
+.resume-body {
+  position: absolute;
+  top: 215px;
+}
+.card-body.contactInfo ul{
+  position: relative;
+}
+.card-body.contactInfo ul li{
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+.fill img {
+  flex-shrink: 0;
+  min-height: 100%;
+  min-width: 100%;
+  /* object-fit: cover;
+  width: 50px;
+  height: 100px; */
+}
+
+.card {
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-right: -15px;
+    margin-left: -15px; */
+    --mdb-gutter-x: 1.5rem;
+    --mdb-gutter-y: 0;
+}
+
+.col {
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    max-width: 100%;
 }
